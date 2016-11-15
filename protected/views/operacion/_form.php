@@ -20,26 +20,20 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fechaOperacion'); ?>
-		<?php echo $form->textField($model,'fechaOperacion'); ?>
-		<?php echo $form->error($model,'fechaOperacion'); ?>
-	</div>
-
-	<div class="row">
         <?php echo $form->labelEx($model, 'fechaOperacion'); ?>
         <?php
-        if ($model->fechaEvento != '') {
-            $model->fechaEvento = date('Y-m-d', strtotime($model->fechaEvento));
+        if ($model->fechaOperacion != '') {
+            $model->fechaOperacion = date('Y-m-d', strtotime($model->fechaOperacion));
         }
         $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             'model' => $model,
             'attribute' => 'fechaOperacion',
-            'value' => $model->fechaEvento,
+            'value' => $model->fechaOperacion,
             'language' => 'es',
             'htmlOptions' => array('readonly' => "readonly"),
             'options' => array(
                 'autoSize' => true,
-                'defaultDate' => $model->fechaEvento,
+                'defaultDate' => $model->fechaOperacion,
                 'dateFormat' => 'yy-mm-dd',
                 'buttonImage' => Yii::app()->baseUrl . '/images/calendar.png',
                 'buttonImageOnly' => true,
@@ -50,7 +44,7 @@
                 'showOtherMonths' => true,
                 'changeMonth' => 'true',
                 'changeYear' => 'true',
-                'minDate' => "3d",
+                'minDate' => "d",
             ),
         ));
         ?> 
