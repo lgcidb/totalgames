@@ -39,25 +39,25 @@
 
 	<div class="row">
         <?php echo $form->labelEx($model, 'clasificacionContenido_idClasificacion'); ?>
-        <?php echo $form->dropDownList($model, 'clasificacionContenido_idClasificacion', CHtml::listData(Clasificacioncontenido::model()->findAll(), 'clasificacionContenido_idClasificacion', 'tipoClasificacion')); ?>
+        <?php echo $form->dropDownList($model, 'clasificacionContenido_idClasificacion', CHtml::listData(Clasificacioncontenido::model()->findAll(), 'idClasificacion', 'tipoClasificacion')); ?>
         <?php echo $form->error($model, 'clasificacionContenido_idClasificacion'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'genero_idGenero'); ?>
-        <?php echo $form->dropDownList($model, 'genero_idGenero', CHtml::listData(Genero::model()->findAll(), 'genero_idGenero', 'nombreGenero')); ?>
+        <?php echo $form->dropDownList($model, 'genero_idGenero', CHtml::listData(Genero::model()->findAll(), 'idGenero', 'nombreGenero')); ?>
         <?php echo $form->error($model, 'genero_idGenero'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'idioma_idIdioma'); ?>
-        <?php echo $form->dropDownList($model, 'idioma_idIdioma', CHtml::listData(Idioma::model()->findAll(), 'idioma_idIdioma', 'nombreIdioma')); ?>
+        <?php echo $form->dropDownList($model, 'idioma_idIdioma', CHtml::listData(Idioma::model()->findAll(), 'idIdioma', 'nombreIdioma')); ?>
         <?php echo $form->error($model, 'idioma_idIdioma'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'plataforma_idPlataforma'); ?>
-        <?php echo $form->dropDownList($model, 'plataforma_idPlataforma', CHtml::listData(Plataforma::model()->findAll(), 'plataforma_idPlataforma', 'nombrePlataforma')); ?>
+        <?php echo $form->dropDownList($model, 'plataforma_idPlataforma', CHtml::listData(Plataforma::model()->findAll(), 'idPlataforma', 'nombrePlataforma')); ?>
         <?php echo $form->error($model, 'plataforma_idPlataforma'); ?>
     </div>
 
