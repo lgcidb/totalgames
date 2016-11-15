@@ -5,14 +5,14 @@
 $this->breadcrumbs=array(
 	'Usuarios'=>array('index'),
 	$model->emailUsuario=>array('view','id'=>$model->emailUsuario),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Create Usuario', 'url'=>array('create')),
-	array('label'=>'View Usuario', 'url'=>array('view', 'id'=>$model->emailUsuario)),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
+	array('label'=>'Lista de Usuarios', 'url'=>array('index')),
+	array('label'=>'Agregar Usuario', 'url'=>array('create')),
+	array('label'=>'Ver Usuario', 'url'=>array('view', 'id'=>$model->emailUsuario)),
+	array('label'=>'Aministar Usuario', 'url'=>array('admin')),
 );
 ?>
 
