@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Operacions',
+	'Operaciones',
 );
 
 $this->menu=array(
-	array('label'=>'Create Operacion', 'url'=>array('create')),
-	array('label'=>'Manage Operacion', 'url'=>array('admin')),
+	array('label'=>'Agregar Operacion', 'url'=>array('create')),
+	array('label'=>'Administrar Operacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Operacions</h1>
+<h1>Operaciones</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -3,19 +3,19 @@
 /* @var $model Operacion */
 
 $this->breadcrumbs=array(
-	'Operacions'=>array('index'),
+	'Operaciones'=>array('index'),
 	$model->idOperacion=>array('view','id'=>$model->idOperacion),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Operacion', 'url'=>array('index')),
-	array('label'=>'Create Operacion', 'url'=>array('create')),
-	array('label'=>'View Operacion', 'url'=>array('view', 'id'=>$model->idOperacion)),
-	array('label'=>'Manage Operacion', 'url'=>array('admin')),
+	array('label'=>'Lista de Operaciones', 'url'=>array('index')),
+	array('label'=>'Agregar Operacion', 'url'=>array('create')),
+	array('label'=>'Ver Operacion', 'url'=>array('view', 'id'=>$model->idOperacion)),
+	array('label'=>'Administrar Operacion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Operacion <?php echo $model->idOperacion; ?></h1>
+<h1>Actualizar Operacion <?php echo $model->idOperacion; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
