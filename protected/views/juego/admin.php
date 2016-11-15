@@ -28,8 +28,6 @@ $('.search-form form').submit(function(){
 
 <h1>Administrar Juegos</h1>
 
-</div><!-- search-form -->
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'juego-grid',
 	'dataProvider'=>$model->search(),
@@ -41,8 +39,10 @@ $('.search-form form').submit(function(){
 		'requisitosJuego',
 		'clasificacionContenido_idClasificacion',
 		'genero_idGenero',
+		/*
 		'idioma_idIdioma',
 		'plataforma_idPlataforma',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),
