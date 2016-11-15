@@ -28,7 +28,7 @@ class JuegoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'listaJuegos'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -74,8 +74,19 @@ class JuegoController extends Controller
 				$this->redirect(array('view','id'=>$model->idJuego));
 		}
 
+		$idiomas = Idioma::model()->findAll();
+
 		$this->render('create',array(
 			'model'=>$model,
+			'idiomas' => $idiomas,
+		));
+	}
+
+	public function actionListajuegos()
+	{
+		$model = new Juego;
+		$this->render('listaJuegos', array(
+			'model' => $model,
 		));
 	}
 
