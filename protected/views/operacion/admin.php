@@ -33,7 +33,6 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'idOperacion',
 		'fechaOperacion',
 		'montoOperacion',
 		'Usuario_emailUsuario',

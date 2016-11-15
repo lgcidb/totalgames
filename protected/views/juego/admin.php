@@ -33,7 +33,6 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'idJuego',
 		'nombreJuego',
 		'descripcionJuego',
 		'requisitosJuego',
