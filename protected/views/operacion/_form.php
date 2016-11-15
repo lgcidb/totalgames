@@ -26,6 +26,36 @@
 	</div>
 
 	<div class="row">
+        <?php echo $form->labelEx($model, 'fechaOperacion'); ?>
+        <?php
+        if ($model->fechaEvento != '') {
+            $model->fechaEvento = date('Y-m-d', strtotime($model->fechaEvento));
+        }
+        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+            'model' => $model,
+            'attribute' => 'fechaOperacion',
+            'value' => $model->fechaEvento,
+            'language' => 'es',
+            'htmlOptions' => array('readonly' => "readonly"),
+            'options' => array(
+                'autoSize' => true,
+                'defaultDate' => $model->fechaEvento,
+                'dateFormat' => 'yy-mm-dd',
+                'buttonImage' => Yii::app()->baseUrl . '/images/calendar.png',
+                'buttonImageOnly' => true,
+                'selectOtherMonths' => true,
+                'showAnim' => 'slide',
+                'showButtonPanel' => true,
+                'showOn' => 'button',
+                'showOtherMonths' => true,
+                'changeMonth' => 'true',
+                'changeYear' => 'true',
+                'minDate' => "3d",
+            ),
+        ));
+        ?> 
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'montoOperacion'); ?>
 		<?php echo $form->textField($model,'montoOperacion'); ?>
 		<?php echo $form->error($model,'montoOperacion'); ?>
