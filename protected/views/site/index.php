@@ -1,20 +1,37 @@
-<?php
-/* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+<?php
+$this->widget('ext.xflexslider.XFlexSlider', array(
+    'slides' => array(
+        //use content
+        'slide1' => array(
+            'id' => 'slide1',
+            'caption' => '',
+            'content' => '<img src="' . Yii::app()->request->baseUrl . '/images/imagen1.jpg" />',
+        ),
+        'slide2' => array(
+            'id' => 'slide2',
+            'caption' => '',
+            'content' => '<img src="' . Yii::app()->request->baseUrl . '/images/imagen2.jpg" />',
+        ),
+        'slide3' => array(
+            'id' => 'slide3',
+            'caption' => '',
+            'content' => '<img src="' . Yii::app()->request->baseUrl . '/images/imagen3.jpg" />',
+        ),
+        'slide4' => array(
+            'id' => 'slide4',
+            'caption' => '',
+            'content' => '<img src="' . Yii::app()->request->baseUrl . '/images/imagen4.jpg" />',
+        ),
+    ),
+    'flexsliderOptions' => array(
+        'animation' => "'slide'",
+        'slideDirection' => 'vertical',
+        'mousewheel' => true,
+    ),
+));
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
