@@ -6,8 +6,9 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+	'language' => 'es',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Total Games',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -23,8 +24,7 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'totalgames',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'password'=>false,
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		
@@ -50,8 +50,16 @@ return array(
 		),
 		*/
 
-		// database settings are configured in database.php
-		'db'=>require(dirname(__FILE__).'/database.php'),
+		/*// database settings are configured in database.php
+		'db'=>require(dirname(__FILE__).'/database.php'),*/
+
+		'db'=>array(
+'connectionString' => 'mysql:host=localhost;dbname=totalgames',
+'emulatePrepare' => true,
+'username' => 'root',
+'password' => false,
+'charset' => 'utf8',
+),
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

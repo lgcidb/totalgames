@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Juego', 'url'=>array('create')),
-	array('label'=>'Manage Juego', 'url'=>array('admin')),
+	array('label'=>'Agregar Juego', 'url'=>array('create')),
+	array('label'=>'Administar Juego', 'url'=>array('admin')),
 );
 ?>
 

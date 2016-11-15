@@ -5,17 +5,17 @@
 $this->breadcrumbs=array(
 	'Juegos'=>array('index'),
 	$model->idJuego=>array('view','id'=>$model->idJuego),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Juego', 'url'=>array('index')),
-	array('label'=>'Create Juego', 'url'=>array('create')),
-	array('label'=>'View Juego', 'url'=>array('view', 'id'=>$model->idJuego)),
-	array('label'=>'Manage Juego', 'url'=>array('admin')),
+	array('label'=>'Lista de Juegos', 'url'=>array('index')),
+	array('label'=>'Agregar Juego', 'url'=>array('create')),
+	array('label'=>'Ver Juego', 'url'=>array('view', 'id'=>$model->idJuego)),
+	array('label'=>'Administar Juegos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Juego <?php echo $model->idJuego; ?></h1>
+<h1>Actualizar Juego <?php echo $model->idJuego; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
