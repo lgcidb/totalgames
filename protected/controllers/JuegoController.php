@@ -85,8 +85,13 @@ class JuegoController extends Controller
 	public function actionListajuegos()
 	{
 		$model = new Juego;
+		$plataforma = 1;
+		$plataformas = Plataforma::model()->findAll();
+		$juegos = Juego::model()->findAll('plataforma_idPlataforma=1');
 		$this->render('listaJuegos', array(
 			'model' => $model,
+			'plataformas' => $plataformas,
+			'juegos' => $juegos,
 		));
 	}
 
