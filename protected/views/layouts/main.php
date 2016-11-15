@@ -29,6 +29,9 @@
 				array('label' => 'Usuarios', 'url' => array('/usuario/admin')),
 				array('label' => 'Juegos', 'url' => array('/juego/admin')),
 				array('label' => 'Operaciones', 'url' => array('/operacion/admin')),
+				array('label' => 'PS3', 'url' => array('/juego/listaJuegos')),
+				array('label' => 'PS4', 'url' => array('/juego/listaPS4')),
+				array('label' => 'Ventas', 'url' => array('/operacion/listaVentas')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

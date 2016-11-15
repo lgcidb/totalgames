@@ -28,7 +28,7 @@ class OperacionController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'listaVentas'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -49,6 +49,16 @@ class OperacionController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
+	public function actionListaVentas()
+	{
+		$model = new Operacion;
+		$operaciones = Operacion::model()->findAll('tipoOperacion_idTipoOperacion=1');
+		$this->render('listaVentas', array(
+			'model' => $model,
+			'operaciones' => $operaciones,
+		));
+	}
+
 	public function actionView($id)
 	{
 		$this->render('view',array(

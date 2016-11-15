@@ -28,7 +28,7 @@ class JuegoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'listaJuegos'),
+				'actions'=>array('index','view', 'listaJuegos', 'listaPS4'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -85,12 +85,21 @@ class JuegoController extends Controller
 	public function actionListajuegos()
 	{
 		$model = new Juego;
-		$plataforma = 1;
-		$plataformas = Plataforma::model()->findAll();
+		
 		$juegos = Juego::model()->findAll('plataforma_idPlataforma=1');
 		$this->render('listaJuegos', array(
 			'model' => $model,
-			'plataformas' => $plataformas,
+			'juegos' => $juegos,
+		));
+	}
+
+	public function actionListaPS4()
+	{
+		$model = new Juego;
+		
+		$juegos = Juego::model()->findAll('plataforma_idPlataforma=2');
+		$this->render('listaPS4', array(
+			'model' => $model,
 			'juegos' => $juegos,
 		));
 	}
