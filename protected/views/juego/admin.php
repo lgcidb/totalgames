@@ -39,10 +39,8 @@ $('.search-form form').submit(function(){
 		'requisitosJuego',
 		'clasificacionContenido_idClasificacion',
 		'genero_idGenero',
-		/*
 		'idioma_idIdioma',
 		'plataforma_idPlataforma',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),
