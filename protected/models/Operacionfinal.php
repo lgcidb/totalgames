@@ -6,12 +6,12 @@
  * The followings are the available columns in table 'operacionfinal':
  * @property integer $idOperacionFinal
  * @property string $fechaOperacionFinal
- * @property integer $Operacion_idOperacion
- * @property string $Usuario_emailUsuarioFinal
+ * @property integer $idOperacion
+ * @property string $emailUsuarioFinal
  *
  * The followings are the available model relations:
- * @property Operacion $operacionIdOperacion
- * @property Usuario $usuarioEmailUsuarioFinal
+ * @property Operacion $idOperacion0
+ * @property Usuario $emailUsuarioFinal0
  */
 class Operacionfinal extends CActiveRecord
 {
@@ -31,12 +31,12 @@ class Operacionfinal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fechaOperacionFinal, Operacion_idOperacion, Usuario_emailUsuarioFinal', 'required'),
-			array('Operacion_idOperacion', 'numerical', 'integerOnly'=>true),
-			array('Usuario_emailUsuarioFinal', 'length', 'max'=>45),
+			array('fechaOperacionFinal, idOperacion, emailUsuarioFinal', 'required'),
+			array('idOperacion', 'numerical', 'integerOnly'=>true),
+			array('emailUsuarioFinal', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idOperacionFinal, fechaOperacionFinal, Operacion_idOperacion, Usuario_emailUsuarioFinal', 'safe', 'on'=>'search'),
+			array('idOperacionFinal, fechaOperacionFinal, idOperacion, emailUsuarioFinal', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,8 +48,8 @@ class Operacionfinal extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'operacionIdOperacion' => array(self::BELONGS_TO, 'Operacion', 'Operacion_idOperacion'),
-			'usuarioEmailUsuarioFinal' => array(self::BELONGS_TO, 'Usuario', 'Usuario_emailUsuarioFinal'),
+			'idOperacion0' => array(self::BELONGS_TO, 'Operacion', 'idOperacion'),
+			'emailUsuarioFinal0' => array(self::BELONGS_TO, 'Usuario', 'emailUsuarioFinal'),
 		);
 	}
 
@@ -61,8 +61,8 @@ class Operacionfinal extends CActiveRecord
 		return array(
 			'idOperacionFinal' => 'Id Operacion Final',
 			'fechaOperacionFinal' => 'Fecha Operacion Final',
-			'Operacion_idOperacion' => 'Operacion Id Operacion',
-			'Usuario_emailUsuarioFinal' => 'Usuario Email Usuario Final',
+			'idOperacion' => 'Id Operacion',
+			'emailUsuarioFinal' => 'Email Usuario Final',
 		);
 	}
 
@@ -86,8 +86,8 @@ class Operacionfinal extends CActiveRecord
 
 		$criteria->compare('idOperacionFinal',$this->idOperacionFinal);
 		$criteria->compare('fechaOperacionFinal',$this->fechaOperacionFinal,true);
-		$criteria->compare('Operacion_idOperacion',$this->Operacion_idOperacion);
-		$criteria->compare('Usuario_emailUsuarioFinal',$this->Usuario_emailUsuarioFinal,true);
+		$criteria->compare('idOperacion',$this->idOperacion);
+		$criteria->compare('emailUsuarioFinal',$this->emailUsuarioFinal,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -27,23 +27,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Usuario_emailUsuario'); ?>
-		<?php echo $form->textField($model,'Usuario_emailUsuario',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'emailUsuario'); ?>
+		<?php echo $form->textField($model,'emailUsuario',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Juego_idJuego'); ?>
-		<?php echo $form->textField($model,'Juego_idJuego'); ?>
+		<?php echo $form->label($model,'idJuego'); ?>
+		<?php echo $form->textField($model,'idJuego'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'tipoOperacion_idTipoOperacion'); ?>
-		<?php echo $form->textField($model,'tipoOperacion_idTipoOperacion'); ?>
+		<?php echo $form->label($model,'idTipoOperacion'); ?>
+		<?php echo $form->textField($model,'idTipoOperacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'estadoOperacion_idEstadoOperacion'); ?>
-		<?php echo $form->textField($model,'estadoOperacion_idEstadoOperacion'); ?>
+		<?php echo $form->label($model,'idEstadoOperacion'); ?>
+		<?php echo $form->textField($model,'idEstadoOperacion'); ?>
 	</div>
 
 	<div class="row buttons">

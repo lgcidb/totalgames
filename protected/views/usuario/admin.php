@@ -28,6 +28,7 @@ $('.search-form form').submit(function(){
 
 <h1>Administrar Usuarios</h1>
 
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'usuario-grid',
 	'dataProvider'=>$model->search(),

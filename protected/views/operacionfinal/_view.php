@@ -13,12 +13,12 @@
 	<?php echo CHtml::encode($data->fechaOperacionFinal); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Operacion_idOperacion')); ?>:</b>
-	<?php echo CHtml::encode($data->Operacion_idOperacion); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idOperacion')); ?>:</b>
+	<?php echo CHtml::encode($data->idOperacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Usuario_emailUsuarioFinal')); ?>:</b>
-	<?php echo CHtml::encode($data->Usuario_emailUsuarioFinal); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('emailUsuarioFinal')); ?>:</b>
+	<?php echo CHtml::encode($data->emailUsuarioFinal); ?>
 	<br />
 
 

@@ -21,23 +21,20 @@
 	<?php echo CHtml::encode($data->requisitosJuego); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('clasificacionContenido_idClasificacion')); ?>:</b>
-	<?php echo CHtml::encode($data->clasificacionContenido_idClasificacion); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Clasificacion')); ?>:</b>
+	<?php echo CHtml::encode($data->idClasificacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('genero_idGenero')); ?>:</b>
-	<?php echo CHtml::encode($data->genero_idGenero); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Genero')); ?>:</b>
+	<?php echo CHtml::encode($data->idGenero); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idioma_idIdioma')); ?>:</b>
-	<?php echo CHtml::encode($data->idioma_idIdioma); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Idioma')); ?>:</b>
+	<?php echo CHtml::encode($data->idIdioma); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('plataforma_idPlataforma')); ?>:</b>
-	<?php echo CHtml::encode($data->plataforma_idPlataforma); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Plataforma')); ?>:</b>
+	<?php echo CHtml::encode($data->idPlataforma); ?>
 	<br />
-
-	*/ ?>
 
 </div>

@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Agregar Juego', 'url'=>array('create')),
-	array('label'=>'Administar Juego', 'url'=>array('admin')),
+	array('label'=>'Agregar Juego', 'url'=>array('admin')),
 );
 ?>
 
@@ -18,5 +18,3 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
-
-<?php echo CHtml::button('Juegos por Plataforma', array('submit' => array('listajuegos'))); ?>

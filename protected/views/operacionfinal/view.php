@@ -23,7 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'idOperacionFinal',
 		'fechaOperacionFinal',
-		'Operacion_idOperacion',
-		'Usuario_emailUsuarioFinal',
+		'idOperacion',
+		'emailUsuarioFinal',
 	),
 )); ?>

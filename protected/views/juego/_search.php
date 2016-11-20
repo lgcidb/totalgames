@@ -32,23 +32,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'clasificacionContenido_idClasificacion'); ?>
-		<?php echo $form->textField($model,'clasificacionContenido_idClasificacion'); ?>
+		<?php echo $form->label($model,'idClasificacion'); ?>
+		<?php echo $form->textField($model,'idClasificacion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'genero_idGenero'); ?>
-		<?php echo $form->textField($model,'genero_idGenero'); ?>
+		<?php echo $form->label($model,'idGenero'); ?>
+		<?php echo $form->textField($model,'idGenero'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idioma_idIdioma'); ?>
-		<?php echo $form->textField($model,'idioma_idIdioma'); ?>
+		<?php echo $form->label($model,'idIdioma'); ?>
+		<?php echo $form->textField($model,'idIdioma'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'plataforma_idPlataforma'); ?>
-		<?php echo $form->textField($model,'plataforma_idPlataforma'); ?>
+		<?php echo $form->label($model,'idPlataforma'); ?>
+		<?php echo $form->textField($model,'idPlataforma'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -33,12 +33,13 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
+		'idOperacion',
 		'fechaOperacion',
 		'montoOperacion',
-		'Usuario_emailUsuario',
-		'Juego_idJuego',
-		'tipoOperacion_idTipoOperacion',
-		'estadoOperacion_idEstadoOperacion',
+		'emailUsuario',
+		'idJuego',
+		'idTipoOperacion',
+		'idEstadoOperacion',
 		array(
 			'class'=>'CButtonColumn',
 		),

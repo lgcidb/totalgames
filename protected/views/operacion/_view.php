@@ -17,20 +17,20 @@
 	<?php echo CHtml::encode($data->montoOperacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Usuario_emailUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->Usuario_emailUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('emailUsuario')); ?>:</b>
+	<?php echo CHtml::encode($data->emailUsuario); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Juego_idJuego')); ?>:</b>
-	<?php echo CHtml::encode($data->Juego_idJuego); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idJuego')); ?>:</b>
+	<?php echo CHtml::encode($data->idJuego); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipoOperacion_idTipoOperacion')); ?>:</b>
-	<?php echo CHtml::encode($data->tipoOperacion_idTipoOperacion); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idTipoOperacion')); ?>:</b>
+	<?php echo CHtml::encode($data->idTipoOperacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('estadoOperacion_idEstadoOperacion')); ?>:</b>
-	<?php echo CHtml::encode($data->estadoOperacion_idEstadoOperacion); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idEstadoOperacion')); ?>:</b>
+	<?php echo CHtml::encode($data->idEstadoOperacion); ?>
 	<br />
 
 

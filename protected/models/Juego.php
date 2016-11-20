@@ -8,16 +8,16 @@
  * @property string $nombreJuego
  * @property string $descripcionJuego
  * @property string $requisitosJuego
- * @property integer $clasificacionContenido_idClasificacion
- * @property integer $genero_idGenero
- * @property integer $idioma_idIdioma
- * @property integer $plataforma_idPlataforma
+ * @property integer $idClasificacion
+ * @property integer $idGenero
+ * @property integer $idIdioma
+ * @property integer $idPlataforma
  *
  * The followings are the available model relations:
- * @property Idioma $idiomaIdIdioma
- * @property Plataforma $plataformaIdPlataforma
- * @property Clasificacióncontenido $clasificacionContenidoIdClasificacion
- * @property Genero $generoIdGenero
+ * @property Idioma $idIdioma0
+ * @property Plataforma $idPlataforma0
+ * @property Clasificacioncontenido $idClasificacion0
+ * @property Genero $idGenero0
  * @property Operacion[] $operacions
  */
 class Juego extends CActiveRecord
@@ -38,13 +38,13 @@ class Juego extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombreJuego, descripcionJuego, clasificacionContenido_idClasificacion, genero_idGenero, idioma_idIdioma, plataforma_idPlataforma', 'required'),
-			array('clasificacionContenido_idClasificacion, genero_idGenero, idioma_idIdioma, plataforma_idPlataforma', 'numerical', 'integerOnly'=>true),
+			array('nombreJuego, descripcionJuego, idClasificacion, idGenero, idIdioma, idPlataforma', 'required'),
+			array('idClasificacion, idGenero, idIdioma, idPlataforma', 'numerical', 'integerOnly'=>true),
 			array('nombreJuego, descripcionJuego', 'length', 'max'=>45),
 			array('requisitosJuego', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idJuego, nombreJuego, descripcionJuego, requisitosJuego, clasificacionContenido_idClasificacion, genero_idGenero, idioma_idIdioma, plataforma_idPlataforma', 'safe', 'on'=>'search'),
+			array('idJuego, nombreJuego, descripcionJuego, requisitosJuego, idClasificacion, idGenero, idIdioma, idPlataforma', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,11 +56,11 @@ class Juego extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idiomaIdIdioma' => array(self::BELONGS_TO, 'Idioma', 'idioma_idIdioma'),
-			'plataformaIdPlataforma' => array(self::BELONGS_TO, 'Plataforma', 'plataforma_idPlataforma'),
-			'clasificacionContenidoIdClasificacion' => array(self::BELONGS_TO, 'Clasificacióncontenido', 'clasificacionContenido_idClasificacion'),
-			'generoIdGenero' => array(self::BELONGS_TO, 'Genero', 'genero_idGenero'),
-			'operacions' => array(self::HAS_MANY, 'Operacion', 'Juego_idJuego'),
+			'idIdioma0' => array(self::BELONGS_TO, 'Idioma', 'idIdioma'),
+			'idPlataforma0' => array(self::BELONGS_TO, 'Plataforma', 'idPlataforma'),
+			'idClasificacion0' => array(self::BELONGS_TO, 'Clasificacioncontenido', 'idClasificacion'),
+			'idGenero0' => array(self::BELONGS_TO, 'Genero', 'idGenero'),
+			'operacions' => array(self::HAS_MANY, 'Operacion', 'idJuego'),
 		);
 	}
 
@@ -74,10 +74,10 @@ class Juego extends CActiveRecord
 			'nombreJuego' => 'Nombre Juego',
 			'descripcionJuego' => 'Descripcion Juego',
 			'requisitosJuego' => 'Requisitos Juego',
-			'clasificacionContenido_idClasificacion' => 'Clasificacion Contenido Id Clasificacion',
-			'genero_idGenero' => 'Genero Id Genero',
-			'idioma_idIdioma' => 'Idioma Id Idioma',
-			'plataforma_idPlataforma' => 'Plataforma Id Plataforma',
+			'idClasificacion' => 'Clasificacion',
+			'idGenero' => 'Genero',
+			'idIdioma' => 'Idioma',
+			'idPlataforma' => 'Plataforma',
 		);
 	}
 
@@ -103,10 +103,10 @@ class Juego extends CActiveRecord
 		$criteria->compare('nombreJuego',$this->nombreJuego,true);
 		$criteria->compare('descripcionJuego',$this->descripcionJuego,true);
 		$criteria->compare('requisitosJuego',$this->requisitosJuego,true);
-		$criteria->compare('clasificacionContenido_idClasificacion',$this->clasificacionContenido_idClasificacion);
-		$criteria->compare('genero_idGenero',$this->genero_idGenero);
-		$criteria->compare('idioma_idIdioma',$this->idioma_idIdioma);
-		$criteria->compare('plataforma_idPlataforma',$this->plataforma_idPlataforma);
+		$criteria->compare('idClasificacion',$this->idClasificacion);
+		$criteria->compare('idGenero',$this->idGenero);
+		$criteria->compare('idIdioma',$this->idIdioma);
+		$criteria->compare('idPlataforma',$this->idPlataforma);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
