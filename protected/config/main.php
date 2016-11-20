@@ -7,6 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'language' => 'es',
+	'sourceLanguage'=>'en',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Total Games',
 

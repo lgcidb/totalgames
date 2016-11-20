@@ -62,7 +62,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'emailUsuario'); ?>
-        <?php echo $form->textField($model, 'emailUsuario', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php echo $form->dropDownList($model, 'emailUsuario', CHtml::listData(Usuario::model()->findAll(), 'emailUsuario', 'emailUsuario')); ?>
         <?php echo $form->error($model, 'emailUsuario'); ?>
     </div>
 
